@@ -1,0 +1,39 @@
+/* Styles go here */
+.back {
+	background-color: #5bc0de;
+}
+
+.tablecontainer{
+	display: table;
+	margin-left: auto ;
+  	margin-right: auto ;
+}
+
+.tablerow
+{
+	display: table-row;	
+}
+
+.tablecolumns{
+	 display: table-cell;
+	 border-style: solid;
+	border-color: black;
+	border-width: 1px;	
+	width:55px;
+	height: 55px;	
+}
+
+.user1 {
+	background-color: #d9534f;
+}
+
+.user2 {
+	background-color: #428bca;
+}
+
+.winner-message
+{
+	background-color: yellow;	
+	font-style: bold;
+}
+
