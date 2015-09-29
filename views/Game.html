@@ -1,0 +1,25 @@
+<div class="panel panel-default">    
+	<div class="panel-heading" >		
+	<p>		
+		<h5 ng-show="!game.gameEnded && game.userToPlay!=''">		
+		  User to play: <strong><mark>USER {{game.userToPlay}}</mark></strong>. Click on a column, the pieces fall straight down, occupying the next available space within the column.
+		  <h5>
+	</p>
+	</div>
+    <div class="panel-body">    	    
+    	<div ng-show="game.gameEnded"  class="alert alert-success" role="alert">
+    		<h3><strong>Well done!</strong> The game is ended, the winner is: <strong>USER {{game.currentUser}}</strong></h3>
+    	</div>
+    	<div class="tablecontainer">
+			<div class="tablerow" ng-repeat="row in game.table.rows" >    			
+				<div class="tablecolumns" ng-repeat="col in row.cols"  ng-click="checkCell(row.rowid,col.colid)"		
+		    			ng-class="{user1: col.user == '1', user2: col.user == '2'}">
+		    				<div ng-model="col.user"></div>    		
+				</div>		
+			</div>		
+		</div>   
+     </div>
+     <div class="panel-footer">     	
+		<p>The objective of the game is to connect four of one's own discs of the same color next to each other vertically, horizontally, or diagonally.</p> 
+     </div>
+</div>
