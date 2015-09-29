@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AngularJS Connect Four Game</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="content/style.css">    
+  </head>
+  <body class="back" ng-app="gameApp">
+	  <div class="container">	    
+		    <div class="row">
+			    <div class="panel panel-default"> 
+			    	<div class="panel-heading" >
+			    <p>
+			  			<h2>Welcome to the Connect Four game!</h2>(also known as Captain's Mistress, Four Up, Four in a Row and Four in a Line)</p>
+			  			<a class="btn btn-success btn-md" href="#Games/1?newgame=true" role="button">Start New Game</a>	 
+			  			<a class="btn btn-danger btn-md" href="#Games/1" role="button">Select User 1</a>	  			
+			  			<a class="btn btn-primary btn-md" href="#Games/2" role="button">Select User 2</a>	  			
+			  			<a class="btn btn-warning btn-md" href="https://en.wikipedia.org/wiki/Connect_Four" role="button">Instructions</a>	 	
+			  			</div>  		
+			  	  </div>						
+			  </div>		
+			  <div class="row">
+				   	<div ng-view></div>
+			   </div>
+		</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/gameFactory.js"></script>
+	<script src="scripts/gameController.js"></script>	
+  </body>
+</html>
